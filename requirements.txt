@@ -7,4 +7,4 @@ requests
 matplotlib
 Pillow
 opencv-python-headless
-tensorflow==2.16.0
+tensorflow==2.16.1
