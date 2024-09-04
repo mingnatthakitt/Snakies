@@ -29,12 +29,14 @@ try:
         custom_objects=custom_objects,
         compile=False  # Compile separately to control optimizer and loss functions
     )
+
+    # Compile the model after loading
+    model.compile(optimizer='Adamax', loss='categorical_crossentropy')  # Adjust as needed
+    
 except Exception as e:
     st.error(f"Error loading model: {e}")
     st.stop()
 
-# Compile the model after loading
-model.compile(optimizer='Adamax', loss='categorical_crossentropy')  # Adjust as needed
 
 # Class labels for predictions
 class_labels = [
